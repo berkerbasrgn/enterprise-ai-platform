@@ -1,7 +1,13 @@
 from fastapi import FastAPI
+from app.core.config import settings
+from app.api.routes import router
 
-app = FastAPI(title = "Enterprise AI Platform")
+app =FastAPI(title=settings.app_name)
+
+app.include_router(router)
 
 @app.get("/")
 async def root():
-    return {"Message": "API is up and running!"}
+    return {
+        "message": f"{settings.app_name} is running in {settings.env} environment."
+    }
