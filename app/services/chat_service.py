@@ -11,3 +11,9 @@ class ChatService:
 
     ## ilerde burda Azure Openai call, rag, vectorsearch , agent workflow
     #  gibi bir entegrasyon yapabiliriz.
+
+    # bu fonksiyon async ama await yok, su an sorun degl cunku gercek bi I/O isle,mi yapmiyor;
+    # ama azure openai baglantisi eklenmdiginde await gelecek, o zaman bu async anlamli 
+    # hale gelecek
+
+    
